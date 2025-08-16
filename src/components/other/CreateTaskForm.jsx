@@ -32,7 +32,7 @@ function CreateTaskForm() {
       })
 
       localStorage.setItem('employee',JSON.stringify(employee));
-      // now update everything
+      // now update everything as need
       setAssignTo('');
       setTaskCategory('')
       setTaskDate('')

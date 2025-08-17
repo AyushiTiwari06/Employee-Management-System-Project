@@ -19,16 +19,14 @@ function App() {
       setLoggedInUserData(LoggedInUser.data)
     }
   }, [])
-
   const handleLogin = (email,password)=>{
-        if(email == "admin@me.com" && password === "123"){
-            const admin = authData.admin;
+        if(email === "admin@me.com" && password === "123"){
+            const admin = authData.admin
             setUser('admin')
             setLoggedInUserData(admin)
             localStorage.setItem("LoggedInUser",JSON.stringify({role:'admin',data:admin}))
         }else if(authData){
             const employee = authData.employees.find((e)=> e.email === email && e.password === password);
-           console.log(employee)
             if(employee){
             setLoggedInUserData(employee)
             setUser('employee')
@@ -45,7 +43,7 @@ function App() {
     <>
     {/* Login wala componet tbhi dekhao jb user nhi h  */}
      {user==='' ? <Login handleLogin={handleLogin}/> : ''}
-     {user === 'admin' ? <AdimDashboard /> : (loggedInUserData ? <EmployeeDashboard data={loggedInUserData}/> : '')}
+     {user === 'admin' ?  <AdimDashboard data={authData.admin[0]}/> : (loggedInUserData ? <EmployeeDashboard data={loggedInUserData}/> : '')}
       
     </>
   )

@@ -1,29 +1,36 @@
-import React from 'react'
-
+import React from "react"
 function TaskListNumber({data}) {
-    
+
   return (
-    <div className='flex mt-10 justify-between gap-5 screen'>
-        <div className=" py-6 px-9 rounded-xl w-[45%] bg-red-400">
-            <h2 className='text-3xl font-semibold'>{data.taskCount.newTasks}</h2>
-            <h3 className='text-xl font-medium'>New Task</h3>
-        </div>
 
-        <div className=" py-6 px-9 rounded-xl w-[45%] bg-green-400">
-            <h2 className='text-3xl font-semibold'>{data.taskCount.active}</h2>
-            <h3 className='text-xl font-medium'>Active</h3>
-        </div>
+    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 p-6">
+      
+      <div className=" bg-yellow-400 text-white rounded-xl p-6 shadow-md text-center 
+                      transform transition duration-300 hover:scale-105 hover:shadow-2xl">
+        <h2 className="text-3xl font-bold">{data.taskCount.newTasks}</h2>
+        <p className="mt-2 text-lg">New Task</p>
+      </div>
 
-        <div className=" py-6 px-9 rounded-xl w-[45%] bg-yellow-300">
-            <h2 className='text-3xl font-semibold'>{data.taskCount.completed}</h2>
-            <h3 className='text-xl font-medium'>Completed</h3>
-        </div>
+      <div className="bg-blue-400 text-white rounded-xl p-6 shadow-md text-center 
+                      transform transition duration-300 hover:scale-105 hover:shadow-2xl">
+        <h2 className="text-3xl font-bold">{data.taskCount.active}</h2>
+        <p className="mt-2 text-lg">Active</p>
+      </div>
 
-        <div className=" py-6 px-9 rounded-xl w-[45%] bg-blue-300">
-            <h2 className='text-3xl font-semibold'>{data.taskCount.failed}</h2>
-            <h3 className='text-xl font-medium'>failed</h3>
-        </div>
+      <div className="bg-green-500 text-black rounded-xl p-6 shadow-md text-center 
+                      transform transition duration-300 hover:scale-105 hover:shadow-2xl">
+        <h2 className="text-3xl font-bold">{data.taskCount.completed}</h2>
+        <p className="mt-2 text-lg">Completed</p>
+      </div>
+
+      <div className="bg-red-500 text-white rounded-xl p-6 shadow-md text-center 
+                      transform transition duration-300 hover:scale-105 hover:shadow-2xl">
+        <h2 className="text-3xl font-bold">{data.taskCount.failed}</h2>
+        <p className="mt-2 text-lg">Failed</p>
+      </div>
+
     </div>
+
   )
 }
 

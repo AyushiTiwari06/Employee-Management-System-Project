@@ -1,9 +1,10 @@
  const employees =  [
     {
       "id": 101,
-      "name":"Ayushi",
-      "email": "rahul.mehta@company.com",
+      "name":"Laxmi",
+      "email": "laxmi@me.com",
       "password": "123",
+      "avtarUrl":"https://api.dicebear.com/7.x/avataaars/svg?seed=Sophia&gender=female",
       "taskCount":{
           "active":2,
           "newTasks":3,
@@ -18,16 +19,16 @@
           "newTasks": true,
           "taskDescription": "Develop login authentication module",
           "taskDate": "2025-08-12",
-          "tastTitle":"Login Page",
-          "taskCategry":"Development"
+          "taskTitle":"Login Page",
+          "taskCategory":"Development"
         },
         {
           "active": false,
           "completed": true,
           "taskDescription": "Fix API response delay issue",
           "taskDate": "2025-08-08",
-          "tastTitle":"Fix API",
-          "taskCategry":"Development",
+          "taskTitle":"Fix API",
+          "taskCategory":"Development",
           "failed": false,
           "newTask": false
         }
@@ -35,43 +36,10 @@
     },
     {
       "id": 102,
-      "name":"Laxmi",
-      "email": "ananya.gupta@company.com",
-      "password": "123",
-      "taskCount":{
-          "active":2,
-          "newTasks":1,
-          "completed":3,
-          "failed":0,
-      },
-      "tasks": [
-        {
-          "active": true,
-          "completed": false,
-          "taskDescription": "Design new dashboard UI",
-          "taskDate": "2025-08-12",
-          "tastTitle":"Design UI",
-          "taskCategry":"Design",
-          "failed": false,
-          "newTasks": true
-        },
-        {
-          "active": false,
-          "completed": true,
-          "taskDescription": "Update color palette for mobile app",
-          "taskDate": "2025-08-09",
-          "tastTitle":"Update Color",
-          "taskCategry":"Mobile Development",
-          "failed": false,
-          "newTasks": false
-        }
-      ]
-    },
-    {
-      "id": 103,
       "name":"Sulekha",
-      "email": "karan.singh@company.com",
+      "email": "sulekha@me.com",
       "password": "123",
+      "avtarUrl":"https://api.dicebear.com/7.x/avataaars/svg?seed=Emma&gender=female",
       "taskCount":{
           "active":2,
           "newTasks":1,
@@ -84,8 +52,8 @@
           "completed": false,
           "taskDescription": "Write automated test cases",
           "taskDate": "2025-08-12",
-          "tastTitle":"Test Case",
-          "taskCategry":"DSA",
+          "taskTitle":"Test Case",
+          "taskCategory":"DSA",
           "failed": false,
           "newTasks": true
         },
@@ -94,9 +62,44 @@
           "completed": false,
           "taskDescription": "Test payment gateway integration",
           "taskDate": "2025-08-07",
-          "tastTitle":"Payment test",
-          "taskCategry":"Development",
+          "taskTitle":"Payment test",
+          "taskCategory":"Development",
           "failed": true,
+          "newTasks": false
+        }
+      ]
+    },
+    {
+      "id": 103,
+      "name":"Shalu",
+      "email": "shalu@me.com",
+      "password": "123",
+      "avtarUrl":"https://api.dicebear.com/7.x/avataaars/svg?seed=Ava&gender=female",
+      "taskCount":{
+          "active":2,
+          "newTasks":1,
+          "completed":3,
+          "failed":0,
+      },
+      "tasks": [
+        {
+          "active": true,
+          "completed": false,
+          "taskDescription": "Design new dashboard UI",
+          "taskDate": "2025-08-12",
+          "taskTitle":"Design UI",
+          "taskCategory":"Design",
+          "failed": false,
+          "newTasks": true
+        },
+        {
+          "active": false,
+          "completed": true,
+          "taskDescription": "Update color palette for mobile app",
+          "taskDate": "2025-08-09",
+          "taskTitle":"Update Color",
+          "taskCategory":"Mobile Development",
+          "failed": false,
           "newTasks": false
         }
       ]
@@ -104,8 +107,9 @@
     {
       "id": 104,
       "name":"Pragti",
-      "email": "sneha.verma@company.com",
+      "email": "pragati@me.com",
       "password": "123",
+      "avtarUrl":"https://api.dicebear.com/7.x/avataaars/svg?seed=Isabella&gender=female",
       "taskCount":{
           "active":2,
           "newTasks":1,
@@ -118,8 +122,8 @@
           "completed": true,
           "taskDescription": "Conduct employee onboarding session",
           "taskDate": "2025-08-10",
-          "tastTitle":"Conduct Seddion",
-          "taskCategry":"Development",
+          "taskTitle":"Conduct Seddion",
+          "taskCategory":"Development",
           "failed": false,
           "newTasks": false
         },
@@ -128,8 +132,8 @@
           "completed": false,
           "taskDescription": "Update HR policies document",
           "taskDate": "2025-08-12",
-          "tastTitle":"Policies",
-          "taskCategry":"Development",
+          "taskTitle":"Policies",
+          "taskCategory":"Development",
           "failed": false,
           "newTasks": true
         }
@@ -138,8 +142,9 @@
     {
       "id": 105,
       "name":"Saumya",
-      "email": "amit.kumar@company.com",
+      "email": "saumya@me.com",
       "password": "123",
+      "avtarUrl":"https://api.dicebear.com/7.x/avataaars/svg?seed=Mia&gender=female",
       "taskCount":{
           "active":2,
           "newTasks":1,
@@ -152,8 +157,8 @@
           "completed": false,
           "taskDescription": "Prepare campaign report",
           "taskDate": "2025-08-12",
-          "tastTitle":"Login Page",
-          "taskCategry":"Development",
+          "taskTitle":"Login Page",
+          "taskCategory":"Development",
           "failed": false,
           "newTasks": true
         },
@@ -162,8 +167,8 @@
           "completed": true,
           "taskDescription": "Post product updates on social media",
           "taskDate": "2025-08-09",
-          "tastTitle":"Login Page",
-          "taskCategry":"Development",
+          "taskTitle":"Login Page",
+          "taskCategory":"Development",
           "failed": false,
           "newTasks": false
         }
@@ -173,8 +178,10 @@
 
    const admin = [{
     "id": 1,
+    "name":"Ayushi",
     "email": "admin@company.com",
     "password": "123",
+    "avtarUrl":"https://api.dicebear.com/7.x/avataaars/svg?seed=Mia&gender=female",
   }];
 
 

@@ -5,27 +5,55 @@ function AllTaskList() {
 
   const authData = useContext(AuthContext);
   return (
-    <div className="bg=[#1c1c1c] p-5 mt-3 rounded h-48">
-        {/* header for taskList */}
-        <div className="bg-red-400 py-2 px-4 mb-2 flex justify-between rounded">
-                <h2 className="text-lg font-medium w-1/5">Employee Name</h2>
-                <h3 className="text-lg font-medium w-1/5">New Task</h3>
-                <h5 className="text-lg font-medium w-1/5">Active</h5>
-                <h5 className="text-lg font-medium w-1/5">Completed</h5>
-                <h5 className="text-lg font-medium w-1/5">Failed</h5>
-        </div>
-        <div id="alltasklist" className="h-[80%] overflow-auto">
-            {/* map on each employee */}
-            {authData.employees.map((employee,idx)=>{
-             return (<div key={idx} className="bg-emerald-200 py-2 px-4 mb-2 flex justify-between rounded">
-                <h2 className="text-lg font-medium w-1/5 text-black">{employee.name}</h2>
-                <h3 className="text-lg font-medium w-1/5 text-red-400">{employee.taskCount.newTasks}</h3>
-                <h5 className="text-lg font-medium w-1/5 text-blue-400">{employee.taskCount.active}</h5>
-                <h5 className="text-lg font-medium w-1/5 text-green-600">{employee.taskCount.completed}</h5>
-                <h5 className="text-lg font-medium w-1/5 text-red-500">{employee.taskCount.failed}</h5>
-        </div>) 
-            })} 
-        </div>
+  
+    <div className="overflow-x-auto w-full">
+      <div className="max-w-5xl mx-auto bg-white shadow-xl rounded-2xl overflow-hidden">
+        <table className="w-full border-collapse text-base text-gray-700">
+          {/* Table Head */}
+          <thead className="bg-gradient-to-r from-indigo-600 to-indigo-500 text-white text-left">
+            <tr>
+              <th className="px-[52px] py-4 font-semibold text-lg">Employee Name</th>
+              <th className="px-[52px] py-4 font-semibold text-lg">New Task</th>
+              <th className="px-[52px] py-4 font-semibold text-lg">Active</th>
+              <th className="px-[52px] py-4 font-semibold text-lg">Completed</th>
+              <th className="px-[52px] py-4 font-semibold text-lg">Failed</th>
+            </tr>
+          </thead>
+
+          {/* Table Body */}
+          <tbody>
+
+            {/* use map to to all employee list */}
+           {authData.employees.map((employee)=>{
+              return (
+              <tr className="odd:bg-gray-50 even:bg-gray-100 hover:bg-indigo-50 transition">
+              <td className="px-6 py-4 font-semibold text-gray-800 text-lg">{employee.name}</td>
+              <td className="px-6 py-4">
+                <span className="px-4 py-2 rounded-full text-sm font-semibold bg-pink-100 text-pink-700">
+                  {employee.taskCount.newTasks}
+                </span>
+              </td>
+              <td className="px-6 py-4">
+                <span className="px-3 py-2 rounded-full text-sm font-semibold bg-blue-100 text-blue-700">
+                   {employee.taskCount.active}
+                </span>
+              </td>
+              <td className="px-6 py-4">
+                <span className="px-4 py-2 rounded-full text-sm font-semibold bg-green-100 text-green-700">
+                  {employee.taskCount.completed}
+                </span>
+              </td>
+              <td className="px-6 py-4">
+                <span className="px-4 py-2 rounded-full text-sm font-semibold bg-red-100 text-red-700">
+                   {employee.taskCount.failed}
+                </span>
+              </td>
+            </tr>
+              )
+           })}
+          </tbody>
+        </table>
+      </div>
     </div>
   )
 }
